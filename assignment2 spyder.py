@@ -48,8 +48,16 @@ print('\nMean\n', np.mean(df_yr.iloc[4:,[31,107,183,259,335]]))
 print("\nCalculating Standard Deviation of Methane emissions (% change from 1990) for five different countries")
 print('\nstandard Deviation\n' ,np.std(df_yr.iloc[4:,[31,107,183,259,335]]))
 
-#Calculating kurtosis using scipy.stats 
-print('Kurtosis',st.kurtosis(df_co.iloc[4,4:]))
+#Calculating kurtosis using scipy.stats for Belgium 
+print("\nCalculating Kurtosis of population growth (annual %) indicator for three countries")
+
+print('\nKurtosis of Belgium :',st.kurtosis(df_co.iloc[4,4:]))
+
+#Calculating kurtosis using scipy.stats for Bulgaria
+print('Kurtosis of Bulgaria :',st.kurtosis(df_co.iloc[100,4:]))
+
+#Calculating kurtosis using scipy.stats for Colombia
+print('Kurtosis of Colombia :',st.kurtosis(df_co.iloc[200,4:]))
 
 #Calculating skewness using scipy.stats                                                                                                                                                                                                                                                                                                                                                                                                             
 print('skewness',st.skew(df_co.iloc[4,4:]))
