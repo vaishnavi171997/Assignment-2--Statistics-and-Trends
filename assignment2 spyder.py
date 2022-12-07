@@ -48,9 +48,9 @@ print('\nMean\n', np.mean(df_yr.iloc[4:,[31,107,183,259,335]]))
 print("\nCalculating Standard Deviation of Methane emissions (% change from 1990) for five different countries")
 print('\nstandard Deviation\n' ,np.std(df_yr.iloc[4:,[31,107,183,259,335]]))
 
-#Calculating kurtosis using scipy.stats for Belgium 
 print("\nCalculating Kurtosis of population growth (annual %) indicator for three countries")
 
+#Calculating kurtosis using scipy.stats for Belgium
 print('\nKurtosis of Belgium :',st.kurtosis(df_co.iloc[4,4:]))
 
 #Calculating kurtosis using scipy.stats for Bulgaria
@@ -59,8 +59,15 @@ print('Kurtosis of Bulgaria :',st.kurtosis(df_co.iloc[100,4:]))
 #Calculating kurtosis using scipy.stats for Colombia
 print('Kurtosis of Colombia :',st.kurtosis(df_co.iloc[200,4:]))
 
-#Calculating skewness using scipy.stats                                                                                                                                                                                                                                                                                                                                                                                                             
-print('skewness',st.skew(df_co.iloc[4,4:]))
+print("\nCalculating Skewness of population growth (annual %) indicator for three countries") 
+#Calculating skewness using scipy.stats for Belgium                                                                                                                                                                                                                                                                                                                                                                                                          
+print('\nskewness of Belgium :',st.skew(df_co.iloc[4,4:]))
+
+#Calculating skewness using scipy.stats for Bulgaria                                                                                                                                                                                                                                                                                                                                                                                                            
+print('skewness of Bulgaria :',st.skew(df_co.iloc[100,4:]))
+
+#Calculating skewness using scipy.stats for Colombia                                                                                                                                                                                                                                                                                                                                                                                                          
+print('skewness of colombia :',st.skew(df_co.iloc[200,4:]))
 
 #Calculating correlation between indicators from 1966-1970 
 correlation = df_co.iloc[4:,10:15]
