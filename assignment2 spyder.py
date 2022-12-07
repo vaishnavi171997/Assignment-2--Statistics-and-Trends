@@ -44,3 +44,6 @@ print('Mean\n', np.mean(df_yr.iloc[4:,10:20]))
 
 #finding standard deviation using numpy
 print('standard Deviation\n' ,np.std(df_yr.iloc[4:,10:20]))
+
+#finding kurtosis using scipy.stats function
+print('Kurtosis',st.kurtosis(df_co.iloc[4,4:]))
