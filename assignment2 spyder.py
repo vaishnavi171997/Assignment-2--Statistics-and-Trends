@@ -50,3 +50,11 @@ print('Kurtosis',st.kurtosis(df_co.iloc[4,4:]))
 
 #Calculating skewness using scipy.stats                                                                                                                                                                                                                                                                                                                                                                                                             
 print('skewness',st.skew(df_co.iloc[4,4:]))
+
+#Calculating correlation between indicators from 1966-1970 
+correlation = df_co.iloc[4:,10:15]
+print() #printing space
+print('Pearson Correlation \n',correlation.corr())
+print()
+#defining correlation using kendall method
+print('Kendall Correlation \n',correlation.corr(method='kendall'))
