@@ -44,8 +44,9 @@ print('\nDescribe\n',df_yr.iloc[4:,[31,107,183,259,335]].describe())
 print("\nCalculating mean of Methane emissions (% change from 1990) for five different countries")
 print('\nMean\n', np.mean(df_yr.iloc[4:,[31,107,183,259,335]]))
 
-#Calculating standard deviation using numpy
-print('standard Deviation\n' ,np.std(df_yr.iloc[4:,10:20]))
+#Calculating standard deviation using numpy for five countries
+print("\nCalculating Standard Deviation of Methane emissions (% change from 1990) for five different countries")
+print('\nstandard Deviation\n' ,np.std(df_yr.iloc[4:,[31,107,183,259,335]]))
 
 #Calculating kurtosis using scipy.stats 
 print('Kurtosis',st.kurtosis(df_co.iloc[4,4:]))
