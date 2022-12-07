@@ -62,7 +62,6 @@ print()
 #defining correlation using kendall method
 print('Kendall Correlation \n',correlation.corr(method='kendall'))
 
-
 #plotting the line graph between two indicators:Co2 emissions from solid fuel consumption
 #and Co2 emissions from liquid fuel consumption over the years
 plt.figure(figsize=(10,8))
