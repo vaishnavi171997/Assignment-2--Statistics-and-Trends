@@ -34,3 +34,9 @@ def readcsv(input_file,countries):
 
 #calling the function to produce two dataframes by choosing few countries
 df_co,df_yr=readcsv('API_19_DS2_en_csv_v2_4700503-Copy.csv',['Belgium','Bulgaria','Colombia','Finland','United Kingdom'])
+
+#Deriving statistical properties
+#using pandas describe function to derive statistical properties
+print('Describe\n',df_yr.iloc[4:,10:20].describe())
+
+
