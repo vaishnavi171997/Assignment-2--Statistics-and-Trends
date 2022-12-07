@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import scipy.stats as st
 
 
-#defining function to produce two dataframes,one with countries as columns and one with years as coulmns
+#defining function to produce two dataframes,one with countries as columns and one with years as columns
 def readcsv(input_file,countries):
     data = pd.read_csv(input_file)
     #replacing the null values with zeroes using fillna() method
