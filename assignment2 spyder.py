@@ -31,7 +31,6 @@ def readcsv(input_file,countries):
     print(transpose)
     return df_countries,df_years
 
-
 #calling the function to produce two dataframes by choosing few countries
 df_co,df_yr=readcsv('API_19_DS2_en_csv_v2_4700503-Copy.csv',['Belgium','Bulgaria','Colombia','Finland','United Kingdom'])
 
