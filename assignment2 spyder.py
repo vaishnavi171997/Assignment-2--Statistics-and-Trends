@@ -39,11 +39,14 @@ df_co,df_yr=readcsv('API_19_DS2_en_csv_v2_4700503-Copy.csv',['Belgium','Bulgaria
 #using pandas describe function to derive statistical properties
 print('Describe\n',df_yr.iloc[4:,10:20].describe())
 
-#finding mean using numpy
+#Calculating mean using numpy
 print('Mean\n', np.mean(df_yr.iloc[4:,10:20]))
 
-#finding standard deviation using numpy
+#Calculating standard deviation using numpy
 print('standard Deviation\n' ,np.std(df_yr.iloc[4:,10:20]))
 
-#finding kurtosis using scipy.stats function
+#Calculating kurtosis using scipy.stats 
 print('Kurtosis',st.kurtosis(df_co.iloc[4,4:]))
+
+#Calculating skewness using scipy.stats                                                                                                                                                                                                                                                                                                                                                                                                             
+print('skewness',st.skew(df_co.iloc[4,4:]))
