@@ -41,8 +41,9 @@ df_co,df_yr=readcsv('API_19_DS2_en_csv_v2_4700503-Copy.csv',['Belgium','Bulgaria
 print("\nCalculating describe of Methane emissions (% change from 1990) for five different countries")
 print('\nDescribe\n',df_yr.iloc[4:,[31,107,183,259,335]].describe())
 
-#Calculating mean using numpy
-print('Mean\n', np.mean(df_yr.iloc[4:,10:20]))
+#Calculating mean using numpy for five countries
+print("\nCalculating mean of Methane emissions (% change from 1990) for five different countries")
+print('\nMean\n', np.mean(df_yr.iloc[4:,[31,107,183,259,335]]))
 
 #Calculating standard deviation using numpy
 print('standard Deviation\n' ,np.std(df_yr.iloc[4:,10:20]))
