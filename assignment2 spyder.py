@@ -58,3 +58,16 @@ print('Pearson Correlation \n',correlation.corr())
 print()
 #defining correlation using kendall method
 print('Kendall Correlation \n',correlation.corr(method='kendall'))
+
+
+#plotting the line graph between two indicators:Co2 emissions from solid fuel consumption
+#and Co2 emissions from liquid fuel consumption over the years
+plt.figure(figsize=(10,8))
+plt.rcParams.update({'font.size':17})
+plt.plot(df_co.iloc[37,20:30],label='Co2 emissions from solid fuel consumption (% of total)',color='red',linewidth=3)
+plt.plot(df_co.iloc[42,20:30],label='Co2 emissions from liquid fuel consumption (% of total)',color='blue',linewidth=3)
+plt.xlabel('Years',fontsize=15)
+plt.ylabel('Co2 Consumption Percentage',fontsize=15)
+plt.title('Co2 Consumption over years for Belgium',fontsize=20)
+plt.legend(fontsize=10,loc ='upper right')
+plt.show()
