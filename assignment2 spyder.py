@@ -41,3 +41,6 @@ print('Describe\n',df_yr.iloc[4:,10:20].describe())
 
 #finding mean using numpy
 print('Mean\n', np.mean(df_yr.iloc[4:,10:20]))
+
+#finding standard deviation using numpy
+print('standard Deviation\n' ,np.std(df_yr.iloc[4:,10:20]))
