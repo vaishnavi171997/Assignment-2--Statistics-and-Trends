@@ -77,6 +77,16 @@ print()
 #defining correlation using kendall method
 print('Kendall Correlation \n',correlation.corr(method='kendall'))
 
+#Plotting line graph of average Methane Emission for five countries 
+plt.figure(figsize=(40,40))
+plt.rcParams.update({'font.size':60})
+plt.plot(np.mean(df_yr.iloc[4:,[31,107,183,259,335]]),label='Methane emission',linewidth=20)
+plt.xlabel('\nCountries',fontsize=60)
+plt.ylabel('\nMean of Methane emissions (% change from 1990)',fontsize=60)
+plt.title('Average Methane emission of five countries',fontsize=70)
+plt.legend()
+plt.show()
+
 #plotting the line graph between two indicators:Co2 emissions from solid fuel consumption
 #and Co2 emissions from liquid fuel consumption over the years
 plt.figure(figsize=(10,8))
@@ -97,4 +107,18 @@ years = ['1976','1977','1978','1979','1980','1981','1982','1983','1984','1985']
 plt.pie(df_co.iloc[50,20:30],labels=years,autopct='%1.1f%%')
 plt.legend(loc = 'upper right')
 plt.title('Electric power consumption (kWh per capita)',fontsize=55)
+plt.show()
+
+#plotting graph of Energy use (kg of oil equivalent per capita)for five countries
+plt.figure(figsize=(40,40))
+plt.rcParams.update({'font.size':50})
+plt.plot(df_co.iloc[50,20:25],label='Belgium',linewidth=15)
+plt.plot(df_co.iloc[126,20:25],label='Bulgaria',linewidth=15)
+plt.plot(df_co.iloc[202,20:25],label='Colombia',linewidth=15)
+plt.plot(df_co.iloc[278,20:25],label='Finland',linewidth=15)
+plt.plot(df_co.iloc[354,20:25],label='United Kingdom',linewidth=15)
+plt.xlabel('\nYears',fontsize=65)
+plt.ylabel('\nEnergy use (kg of oil equivalent per capita)',fontsize=65)
+plt.title('\nEnergy use (kg of oil equivalent per capita)',fontsize=65)
+plt.legend()
 plt.show()
