@@ -69,21 +69,17 @@ print('skewness of Bulgaria :',st.skew(df_co.iloc[100,4:]))
 #Calculating skewness using scipy.stats for Colombia                                                                                                                                                                                                                                                                                                                                                                                                          
 print('skewness of colombia :',st.skew(df_co.iloc[200,4:]))
 
-#Calculating correlation between indicators from 1966-1970 
-correlation = df_co.iloc[4:,10:15]
-print() #printing space
-print('Pearson Correlation \n',correlation.corr())
-print()
+#Calculating correlation between indicators for Belgium and Bulgaria 
+correlation = df_co.iloc[[2,4,50,38,43,74,75,78,80,126,114],5:12]
+print('\nPearson Correlation \n',correlation.corr())
 #defining correlation using kendall method
-print('Kendall Correlation \n',correlation.corr(method='kendall'))
+print('\nKendall Correlation \n',correlation.corr(method='kendall'))
 
 #Plotting heat map to calculate correlation between indicators
 plt.figure(figsize=(15,15))
 cbm = plt.imshow(correlation.corr(),aspect='auto')
 cb=plt.colorbar(cbm)
 cb.set_label('Range',fontsize=60)
-#plt.xticks(range(len(correlation.columns)),correlation.columns,rotation=90)
-
 plt.xticks([0,1,2,3,4,5,6],['Urban population',
                           'Population, total',
                           'Energy use',
