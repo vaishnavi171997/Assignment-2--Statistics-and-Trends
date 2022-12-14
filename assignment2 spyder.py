@@ -79,7 +79,7 @@ print('\nKendall Correlation \n',correlation.corr(method='kendall'))
 plt.figure(figsize=(15,15))
 cbm = plt.imshow(correlation.corr(),aspect='auto')
 cb=plt.colorbar(cbm)
-cb.set_label('Range',fontsize=60)
+cb.set_label('Correlation Range',fontsize=60)
 plt.xticks([0,1,2,3,4,5,6],['Urban population',
                           'Population, total',
                           'Energy use',
