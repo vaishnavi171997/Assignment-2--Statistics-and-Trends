@@ -77,6 +77,28 @@ print()
 #defining correlation using kendall method
 print('Kendall Correlation \n',correlation.corr(method='kendall'))
 
+#Plotting heat map to calculate correlation between indicators
+plt.figure(figsize=(15,15))
+cbm = plt.imshow(correlation.corr(),aspect='auto')
+cb=plt.colorbar(cbm)
+cb.set_label('Range',fontsize=60)
+#plt.xticks(range(len(correlation.columns)),correlation.columns,rotation=90)
+
+plt.xticks([0,1,2,3,4,5,6],['Urban population',
+                          'Population, total',
+                          'Energy use',
+                          'CO2 emissions from solid fuel consumption',
+                          'CO2 emissions from liquid fuel consumption',
+                          'Arable land',
+                          'Agricultural land'],rotation=90,fontsize=30)
+plt.yticks([0,1,2,3,4,5,6],['Urban population',
+                          'Population, total',
+                          'Energy use',
+                          'CO2 emissions from solid fuel consumption',
+                          'CO2 emissions from liquid fuel consumption',
+                          'Arable land',
+                          'Agricultural land'],fontsize=30)
+
 #Plotting line graph of average Methane Emission for five countries 
 plt.figure(figsize=(40,40))
 plt.rcParams.update({'font.size':60})
